@@ -18,26 +18,9 @@
 #include <algorithm>
 using namespace std;
 
+void resuelveProblema(int numero_trabajos,vector <pair <int, int>> par,vector <double> ratio, vector<double>::iterator it,vector <int> resultado){
 
-
-int main(){
-    int casos; //Entero
-
-    int numero_trabajos;//Es por cada caso
-    vector <pair <int, int>> par; //Es por cada caso
-    vector <double> ratio; //Es por cada caso
-    std::vector<double>::iterator it; //es por cada caso
-    vector <int> resultado;//Es por cada caso
-
-    cin >> casos >> numero_trabajos;
-
-    for(int i = 0; i<casos;i++){
-        
-    }
-
-
-
-    for (int i = 0; i < numero_trabajos; i++){
+  for (int i = 0; i < numero_trabajos; i++){
         int tiempoT;
         int costoT;
         cin >> tiempoT >> costoT;
@@ -61,12 +44,43 @@ int main(){
     par.erase(par.begin() + indice);
     }
 
-    for(auto i: resultado){
-        cout << i <<" ";
+    for(int i = 0; i<resultado.size();i++){
+        cout << resultado[i];
+        if(i < resultado.size() - 1){
+            cout << " ";
+        }
     }
-    cout << endl;
+
+
 
    
+
+}
+
+
+int main(){
+    int casos; //Entero
+
+
+    cin >> casos;
+
+    for(int i = 0; i < casos ; i++){
+
+     int numero_trabajos;//Es por cada caso
+    vector <pair <int, int>> par; //Es por cada caso
+    vector <double> ratio; //Es por cada caso
+    vector<double>::iterator it; //es por cada caso
+    vector <int> resultado;//Es por cada caso
+    cin >> numero_trabajos;
+    resuelveProblema(numero_trabajos,par,ratio,it,resultado);
+     if (i < casos - 1){
+        cout << endl;
+        cout << endl;
+    } 
+
+    }
+
+    cout << endl;
 
 
 

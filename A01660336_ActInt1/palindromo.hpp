@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
-
+#include <utility>
 using namespace std;
-void palindromo(const string &cadena) {
+pair<int,int> palindromo(const string &cadena) {
    int tamanio_cadena = cadena.size();
    int indice  = 0;
     int longitud = 0;
@@ -22,6 +22,7 @@ void palindromo(const string &cadena) {
 
        izquierda = i - 1;
        derecha = i + 1;
+       
        //Caso en el que es impar
        while(izquierda >= 0 && derecha < tamanio_cadena && cadena[izquierda] == cadena[derecha]) {
            if(derecha - izquierda + 1 > longitud) {
@@ -32,19 +33,6 @@ void palindromo(const string &cadena) {
            derecha++;
        }
    }
-   if(longitud - 1 >= indice){
-      cout <<"The longest common subsecuence " << indice << " y termina en el indice "<< (indice + longitud - 1);
-      
-   }
-   else{
-      cout << "No existe palindromo en el texto.";
-   }
-
-   
-}
-int main()
-{
-    string s = "forgeeksskeegfor";
-    palindromo(s);
-    return 0;
+   pair<int,int> salida {indice , indice + longitud};
+   return salida;
 }

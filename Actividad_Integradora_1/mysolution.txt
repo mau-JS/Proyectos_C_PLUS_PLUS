@@ -1,0 +1,15 @@
+transmission1.txt:
+mcode1.txt - True, starts at position 165
+mcode2.txt - True, starts at position 699
+mcode3.txt - True, starts at position 60
+
+transmission2.txt:
+mcode1.txt - True, starts at position 658
+mcode2.txt - True, starts at position 406
+mcode3.txt - True, starts at position 792
+
+Transmission1.txt:
+Mirrored code found, starts at 415 and ends at 523.
+
+Transmission2.txt:
+Mirrored code found, starts at 238 and ends at 346.
